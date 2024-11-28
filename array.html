@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//FOR OF LOOP 
+
+let arrn=["oye","Bahubali","rebel","mirchi"]
+for(i of arrn){
+    console.log(i);
+}
+
+
+//For in loop
+
+let arrm=["oye","Bahubali","rebel","mirchi"]
+for(i in arrm){
+    console.log(i);
+}
+
+
+
+// Create an array of your favorite movies and iterate an array  to the.
+
+let arr1=["maharaj","maharani","rajarani","salar"]
+for(i=0;i<arr1.length;i++){
+    console.log(i);
+}
+
+
+// 2)Remove elements from an array
+// Remove the first and last elements from the array.
+
+let arr2=["maharaj","maharani","rajarani","salar"]
+let res=arr2.shift();
+let res1=arr2.pop();
+console.log(res);
+console.log(res1);
+
+
+
+
+// Reverse an array using for loop 
+
+let arr3=["maharaj","maharani","rajarani","salar"]
+let arr4=[]
+for( let i=arr3.length-1;i>=0;i--){
+    arr4.push(arr3[i]);
+}
+console.log(arr4);
+
+ 
+
+// print the evensum and oddsum in array
+
+let arrk=[12,3,5,6,22,56,29] 
+let sum=0;
+let sum1=0
+for(i of arrk){
+    if(i%2==0){
+        sum+=i
+    }
+    else{
+        sum1+=i;
+    }
+}
+  console.log("The sum of even numbers "+ sum);
+  console.log("The sum of odd  numbers "+ sum1);
+ 
+
+
+
+// Take a heterogenious array and separate each data type into new array
+
+let arr = ["apple", "banana", "mango", "banana", 3, 4, 5, 6, true, { name: "object" }];
+
+let num = [];
+let str = [];
+let bool = [];
+let obj = [];
+
+for (let item of arr) {
+    if (typeof item === "number") {
+        num.push(item);
+    } else if (typeof item === "string") {
+        str.push(item);
+    } else if (typeof item === "boolean") {
+        bool.push(item);
+    } else if (typeof item === "object" && item !== null) {
+        obj.push(item);
+    }
+}
+
+console.log("num =", num);
+console.log("str =", str);
+console.log("boolean=",bool);
+console.log("object=",obj);
+
+
+
+    </script>
+</body>
+</html>
